@@ -1,0 +1,155 @@
+.section {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-paper-dim, #dcdcdc);
+  padding: 80px 40px 120px;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  min-height: 600px;
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  font-family: var(--font-serif, "Georgia", serif);
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: var(--color-ink, #000000);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Connectors SVG */
+.connectorsSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* White Placeholder Cards */
+.card {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.cardTopLeft {
+  top: 60px;
+  left: 30%;
+  width: 220px;
+  height: 220px;
+  transform: rotate(-3deg);
+}
+
+.cardBottomLeft {
+  bottom: 20px;
+  left: 4%;
+  width: 210px;
+  height: 210px;
+  transform: rotate(0deg);
+}
+
+.cardTopRight {
+  top: 160px;
+  right: 6%;
+  width: 230px;
+  height: 230px;
+  transform: rotate(3deg);
+}
+
+/* Labels Layout */
+.flowContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.step {
+  position: absolute;
+}
+
+.label {
+  font-family: var(--font-serif, "Georgia", serif);
+  font-size: 1.15rem;
+  color: var(--color-ink, #000000);
+  white-space: nowrap;
+}
+
+.step1 {
+  top: 120px;
+  left: 6%;
+}
+
+.step2 {
+  bottom: 60px;
+  left: 17%;
+}
+
+.step3 {
+  bottom: 60px;
+  left: 32%;
+}
+
+.step4 {
+  top: 280px;
+  left: 53%;
+}
+
+.step5 {
+  bottom: 60px;
+  right: 8%;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 900px) {
+  .section {
+    padding: 60px 24px;
+  }
+
+  .container {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .title {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .connectorsSvg {
+    display: none;
+  }
+
+  .card {
+    position: static;
+    transform: none;
+    width: 240px;
+    height: 220px;
+  }
+
+  .flowContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .step {
+    position: static;
+  }
+}

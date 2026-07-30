@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --font-source: var(--font-source-serif-4);
   --font-playfair: var(--font-playfair);
+  --font-caveat: var(--font-caveat);
 }
 
 @media (prefers-color-scheme: dark) {
